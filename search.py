@@ -12,16 +12,17 @@ if len(sys.argv) > 2:
     try:
         for line in open(sys.argv[1]):
             ln += 1
-            if sys.argv[2] in line:
+            if sys.argv[2].lower() in line.lower():
                 match += 1
                 print("Line " + str(ln) + ":")
                 print(line)
-                
+
+        print(str(match) + " match(es) found.")
+        
     except FileNotFoundError:
         print(sys.argv[1] + " not found.")
         errMsg = True
 
-    print(str(match) + " match(es) found.")
 else:
     errMsg = True
 
