@@ -38,11 +38,12 @@ try:
 
     # Close output file
     if outFile is not None:
-    outFile.close()
+        outFile.close()
 
 except FileNotFoundError:
     print("Input file, " + sys.argv[1] + " not found.")
     errMsg = True
+
 
 
 
