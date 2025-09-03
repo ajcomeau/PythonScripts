@@ -1,5 +1,7 @@
 import sys
 import io
+# A short script to count the occurences of each word in a text file
+# and list the words in descending order of frequency
 
 wordDict = {}
 
@@ -15,4 +17,5 @@ if len(sys.argv) > 1:
 
     for word, count in wordsByCount.items():
         print(f"{word}: {count}")
+
 
