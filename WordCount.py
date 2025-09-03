@@ -36,14 +36,13 @@ try:
         if outputFile is not None:
             outFile.write(f"{word}: {count}\n")
 
-    # Close output file
-    if outFile is not None:
-        outFile.close()
-
 except FileNotFoundError:
     print("Input file, " + sys.argv[1] + " not found.")
     errMsg = True
     
+# Close output file
+if outFile is not None:
+outFile.close()
 
 
 
